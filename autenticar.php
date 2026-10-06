@@ -32,7 +32,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 //========================================================== 
 
 // Verificação se o usuário existe e se a senha está correta.
-// password_verify() compara a senha digitada com a senha digitada com o has salvo
+// password_verify() compara a senha digitada com a senha digitada com o hash salvo
 // no banco
 if ($usuario && password_verify($senha, $usuario['senha'])) {
     // Login bem-sucedido, guarda o nome do usúario na sessão.
