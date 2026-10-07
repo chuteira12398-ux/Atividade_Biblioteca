@@ -17,7 +17,7 @@ include("verifica_sessao.php");
 <body>
     <div class="container">
         <!-- Exibe o nome do usuário logado (vem de sessão $_SESSION)-->
-         <h1>Olá, <?php echo $_SESSION['nome']; ?></h1>
+         <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
         <p class="subtitulo">Bem-vindo ao painel principal da 
             biblioteca. Escolha uma opção abaixo:</p>
             <!-- Cards grandes para facilitar a navegação -->
