@@ -38,7 +38,7 @@ if ($usuario && password_verify($senha, $usuario['senha'])) {
     // Login bem-sucedido, guarda o nome do usúario na sessão.
     $_SESSION['nome'] = $usuario['nome'];
     // Redireciona para o painel principal
-    header("Location: dashboard.php");
+    header("Location: painel.php");
     exit();
 } else {
     // Login inválido, redireciona de volta para a página de login
