@@ -19,8 +19,8 @@
         <h1>Cadastrar Livro</h1>
         <p class="subtitulo">Preencha os dados do novo livro</p>
 
-        <!-- Formulário envia os dados para salvar_livros.php -->
-        <form action="salvar_livros.php" method="POST">
+        <!-- Formulário envia os dados para salvar_livro.php -->
+        <form action="salvar_livro.php" method="POST">
             
             <div class='form-group'>
                 <label for="titulo">Título:</label>
