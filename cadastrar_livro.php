@@ -24,14 +24,12 @@
             
             <div class='form-group'>
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" required>
-                <placeholdder>Digite o título do livro</placeholder>
+                <input type="text" id="titulo" name="titulo" required placeholder = "Digite o título do livro">
          </div>
 
             <div class='form-group'>
                <label for="autor">Autor:</label>
-                <input type="text" id="autor" name="autor" required>
-                <placeholdder>Digite o nome do autor</placeholder>
+                <input type="text" id="autor" name="autor" required placeholder= "Digite o nome do autor">
             </div>
 
             <div class="form-group">

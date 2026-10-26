@@ -26,56 +26,54 @@ $livro = mysqli_fetch_assoc($resultado);
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Livro - Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Editar Livro - Biblioteca</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Editar Livro</h1>
-        <p class="subtitulo">
-              Altere os dados do livro e clique em Atualizar.
-        </p>
+   <div class="container">
+      <h1>Editar Livro</h1>
+      <p class="subtitulo">
+         Altere os dados do livro e clique em Atualizar.
+      </p>
 
-        <!-- Formuário envia os dados atualizar_livro.php-->
-         <form action="atualizar_livro.php" method="POST">
-           <!-- Campo hidden guard o ID sem aparecer na tela -->
-             <input type="hidden" name="id" 
-              value="<?php echo $livro['id']; ?>">
+      <!-- Formuário envia os dados atualizar_livro.php-->
+      <form action="atualizar_livro.php" method="POST">
+         <!-- Campo hidden guard o ID sem aparecer na tela -->
+         <input type="hidden" name="id"
+            value="<?php echo $livro['id']; ?>">
 
-             <div class="form-group">
-                <label for="titulo">Título</label>
-                <input type="text" id="titulo" name="titulo"
-                value="<?php echo $livro['titulo']; ?>" required>
-             </div>
-             <div class="form-group">
-                <label for="autor">Autor</label>
-                <input type="text" id="autor" name="autor"
-                value="<?php echo $livro['autor']; ?>" required>
-             </div>
-             <div class="form-group">
-                <label for="status">Status</label>
-                <select type="text" id="status" name="status" required>
-                <!-- Marcar como select a opção que corresponde ao status atual-->
-                 <option value="Disponível" <?php if 
-                 ($livro['status']=== 'Disponível') echo 'selected'; ?>>
-                    Disponível</option>
-                 <option value="Emprestado" <?php if 
-                 ($livro['status']=== 'Emprestado') echo 'selected'; ?>>
-                    Emprestado</option>
-                </select>
-             </div> 
-             <button type="submit" class="btn btn-block"
-             >Atualizar Livro</button>
-         </form>
-         <!-- Botão de voltar para listagem de livros -->
-          <a href="lista_livro.php" class="btn btn-voltar">
-            Voltar para a Listagem
-          </a>
-    </div>
+         <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo"
+               value="<?php echo $livro['titulo']; ?>" required>
+         </div>
+         <div class="form-group">
+            <label for="autor">Autor</label>
+            <input type="text" id="autor" name="autor"
+               value="<?php echo $livro['autor']; ?>" required>
+         </div>
+         <div class="form-group">
+            <label for="status">Status</label>
+            <select type="text" id="status" name="status" required>
+               <!-- Marcar como select a opção que corresponde ao status atual-->
+               <option value="Disponível" <?php if ($livro['status'] === 'Disponível') echo 'selected'; ?>>
+                  Disponível</option>
+               <option value="Emprestado" <?php if ($livro['status'] === 'Emprestado') echo 'selected'; ?>>
+                  Emprestado</option>
+            </select>
+         </div>
+         <button type="submit" class="btn btn-block">Atualizar Livro</button>
+      </form>
+      <!-- Botão de voltar para listagem de livros -->
+      <a href="lista_livro.php" class="btn btn-voltar">
+         Voltar para a Listagem
+      </a>
+   </div>
 
 </body>
 
